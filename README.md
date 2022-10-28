@@ -4,14 +4,8 @@ Fairseq Code for Neurips 2022 paper:  "CoNT: Contrastive Neural Text Generation"
 
 This is the [fairseq-based](https://github.com/facebookresearch/fairseq) implementation 
 for NeurIPS 2022  paper: *[CoNT: Contrastive Neural Text Generation](https://arxiv.org/abs/2205.14690)*.
-# CoNT: Contrastive Neural Text Generation
-This is the [transformers-based](https://github.com/huggingface/transformers.git) implementation 
- for NeurIPS 2022  paper: *[CoNT: Contrastive Neural Text Generation](https://arxiv.org/pdf/2205.14690v2.pdf)*.
- For machine translation tasks please refer to our [fairseq code](https://github.com/ChenxinAn-fdu/CoNT).
-
 CoNT is a strong contrastive learning framework for neural text generation which outperforms the MLE based training method on **five** generation tasks, including *machine translation*, *summarization*, *code comment generation*, *data-to-text generation*, *commensense generation*. 
-
-We are pleased to answer any questions about this paper or codes ! e-mail: `cxan20@fudan.edu.cn` 
+This repo is mainly about machine translation tasks. For other tasks please refer to our [transformers repo](https://github.com/Shark-NLP/CoNT)
 
 -----
 
