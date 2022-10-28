@@ -52,11 +52,14 @@ With checkpoints average
 ```
 python run_iwslt14.py --mode gen --gpus 0 --save_path /path/to/checkpoints/ --avg_ckpt
 ```
-## Compound splitting
+## Tips of reproducing results on WMT14
+- Compound splitting
 Previous work usually reports the results with compound splitting on WMT'14 En-De translation task. To apply compound splitting to the reference file and output file, please run the following cmd:
 ```
 python run_wmt14.py --mode score --out_file /path/to/checkpoints/checkpoint_best.out
 ```
+- Training set 
+Fairseq has provided two versions of training set: (1) 3.9M training samples and (2) 4.5M training samples. We reported the results with the 4.5M training set (the same as the original paper [transformer](https://arxiv.org/abs/1706.03762)) in this paper. Using the 3.9M training set will lead to better results. 
 
 ### Citing
 ```
