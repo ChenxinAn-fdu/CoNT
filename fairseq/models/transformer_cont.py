@@ -87,6 +87,7 @@ class TransformerCoNTModel(TransformerModel):
         parser.add_argument('--diverse_bias', default=2.5, type=float)
         parser.add_argument('--beam_size', default=12, type=int)
         parser.add_argument('--from_hypo', default=0.75, type=float)
+        parser.add_argument('--margin', default=0.01, type=float)
         parser.add_argument('--keep_dropout', default=0, type=int, choices=[0,1])
         parser.add_argument('--warmup', default=0, type=int, choices=[0,1])
 
@@ -133,7 +134,7 @@ class TransformerCoNTModel(TransformerModel):
     def ranking_loss(self, cos_distance, bleu_distance):
         # equivalent to initializing TotalLoss to 0
         # here is to avoid that some special samples will not go into the following for loop
-        margin = 0.01
+        margin = self.args.margin
         ones = torch.ones(cos_distance.size(), device=cos_distance.device)
         loss_func = torch.nn.MarginRankingLoss(0.0)
         total_loss = loss_func(cos_distance, cos_distance, ones)
