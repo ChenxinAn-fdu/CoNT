@@ -52,6 +52,11 @@ With checkpoints average
 ```
 python run_iwslt14.py --mode gen --gpus 0 --save_path /path/to/checkpoints/ --avg_ckpt
 ```
+## Compound splitting
+Previous work usually reports the results with compound splitting on WMT'14 En-De translation task. To apply compound splitting to the reference file and output file, please run the following cmd:
+```
+python run_wmt14.py --mode score --out_file /path/to/checkpoints/checkpoint_best.out
+```
 
 ### Citing
 ```
