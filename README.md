@@ -54,7 +54,7 @@ python run_iwslt14.py --mode train --gpus 0,1,2,3
 ```
 python run_iwslt14.py --mode gen --gpus 0 --save_path /path/to/checkpoints/checkpoint_best.pt
 ```
-With  checkpoints average
+With checkpoints average
 ```
 python run_iwslt14.py --mode gen --gpus 0 --save_path /path/to/checkpoints/ --avg_ckpt
 ```
