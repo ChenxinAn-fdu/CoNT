@@ -85,7 +85,7 @@ if __name__ == '__main__':
     parser.add_argument('--warmup_accum', default=1, type=int)
     parser.add_argument('--accum', default=8, type=int)
     parser.add_argument('--warmup_epochs', default=150, type=int)
-    parser.add_argument('--total_epochs', default=10, type=int)
+    parser.add_argument('--total_epochs', default=5, type=int)
 
     parser.add_argument('--alpha', default=0.3, type=float)
 
